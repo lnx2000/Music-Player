@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/iv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/dark"
+        app:civ_border_color="#3f51b5"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#3f51b5"
+        app:civ_shadow_radius="10dp" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_above="@+id/seek"
+        android:id="@+id/list"
+        android:layout_marginVertical="20dp"
+        android:divider="@null"
+        />
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin1"
+        android:layout_marginHorizontal="50dp"
+        android:progress="0"
+        android:id="@+id/seek"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin"
+        android:id="@+id/lin1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="#101010"
+            android:layout_weight="1"
+            android:id="@+id/starttimer"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textColor="#101010"
+            android:id="@+id/endtimer"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:id="@+id/lin">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_skip_previous_black_24dp"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
+            android:id="@+id/prev"
+            android:clickable="true"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_play_arrow_black_24dp"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
+            android:id="@+id/playpause"
+            android:clickable="true"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_skip_next_black_24dp"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
+            android:id="@+id/next"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</LinearLayout>
